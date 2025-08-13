@@ -2,18 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
     border: none;
+    font-family: "Inter", sans-serif;
     outline: none;
     text-decoration: none;
 }
 
 :root{
-    --primary-color: #540B0E;
+    --primary-color: #FA17FA;
     --secondary-color: #f0f0f0;
-    --background-color: #FFF3B0DEE3F7;
-    --text-color: #E09F3E;
+    --background-color: #1B2021;
+    --text-color: #FDFFFD;
 }
 
 html{
@@ -31,8 +32,8 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 4rem 12% 4rem;
-    backdrop-filter: blur(10px);
+    padding: 3rem 12% 3rem;
+    backdrop-filter: blur(1px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -132,7 +133,7 @@ span {
     box-shadow: 0 0 100px var(--primary-color), 0 0 50px var(--primary-color);
 }
 .home-content p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 500;
     line-height: 1.8;
     max-width: 1000px;
@@ -164,7 +165,7 @@ span {
     display: inline-block;
     padding: 1rem 2.8rem;
     background: var(--primary-color);
-    color: black;
+    color: var(--text-color);
     font-size: 1.6rem;
     font-weight: 500;
     letter-spacing: 0.1rem;
@@ -193,4 +194,62 @@ span {
     background-color: var(--primary-color);
     color: var(--background-color);
     box-shadow: 0 0 25px var(--primary-color);
-}   
+}  
+.text-animation {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.text-animation span {
+    position: relative;
+}
+.text-animation span::before {
+    content: "Virtual Assistant";
+    color: var(--primary-color);
+    animation: words 20s infinite;
+}
+.text-animation span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--primary-color);
+    background-color: var(--background-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor {
+    to {
+        border-left: 2px solid var(--primary-color);
+    }
+}
+@keyframes words {
+    0%,
+    20% {
+        content: "Front-End Developer";
+    }
+    21%,
+    40% {
+        content: "Web Designer";
+    }
+    41%,
+    60% {   
+        content: "UI/UX Designer";
+    }
+    61%,
+    80% {    
+        content: "Software Engineer";
+    }
+    81%,
+    100% {          
+        content: "Full Stack Developer";
+    }
+}
+@keyframes typing { 
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+        width: calc(100% + 8px);
+    }
+}
