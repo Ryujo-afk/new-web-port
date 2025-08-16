@@ -37,7 +37,10 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 5;
+    z-index: 1000;
+}
+.header .sticky {
+    box-shadow: 0.1rem solid rgba(0, 0, 0, 0.2);
 }
 .logo{
     font-size: 3rem;
@@ -67,11 +70,10 @@ header{
     color: var(--primary-color);
 }
 
-.menu-icon {
+#menu-icon {
     font-size: 3.6rem;
     color: var(--primary-color);
     display: none;
-    cursor: pointer;
 } 
 
 section {
@@ -228,7 +230,7 @@ span {
 @keyframes words {
     0%,
     20% {
-        content: "Front-End Developer";
+        content: "Virtual Assistant";
     }
     21%,
     40% {
@@ -240,11 +242,11 @@ span {
     }
     61%,
     80% {    
-        content: "Software Engineer";
+       content: "Frontend Developer";
     }
     81%,
     100% {          
-        content: "Full Stack Developer";
+        content: "Software Engineer";
     }
 }
 @keyframes typing { 
@@ -256,10 +258,34 @@ span {
     }
 }
 
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.about-img img{
+    width: 700px;
+    max-width: 1000px;
+    left: 50px;
+    justify-content: center;
+}
 .heading{
+    text-align: center ;
     font-size: 8rem;
-    text-align: center;
-    margin: 5rem 0;
+}
+.heading h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+.about-content h3{
+    font-size: 2.6rem;
+}
+.about-content p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin: 2rem 0 3rem;
+    color: var(--text-color);
 }
 .education{
     padding: 100px 15px;
@@ -619,4 +645,77 @@ footer .copyright {
     color: gray;
     text-align: center;
     justify-content: center;
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 1rem 3%;
+ backdrop-filter: blur(8px); /* <-- magic */
+  background: rgba(0,0,0,0.3); /* dim effect */
+    }
+    .section {
+        padding: 10rem 3% 2rem;
+    }
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+@media (max-width: 768px) {
+#menu-icon {
+  display: block;
+  font-size: 2rem;
+  cursor: pointer;
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 2000; 
+  color: white;
+}
+
+.navbar {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 300px; /* adjust size */
+  height: inherit;
+  padding: 2rem;
+  background: var(--background-color, #222);
+  border-top: 1px solid rgba(0,0,0,0.2);
+  flex-direction: column;
+  display: none; 
+  z-index: 1500;
+  transition: right 0.5s ease;
+}
+
+.navbar.active {
+  display: flex;
+}
+
+.home{
+    flex-direction: column;
+}
+.home-content h3{
+    font-size: 2.5rem;
+}
+.home-content h1 {
+    font-size: 5rem;
+}
+.home-image img {
+    width: 700vw;
+    margin-top: 4rem;
+}
+.about {
+    flex-direction: column-reverse;
+}
+.about-content h2 {
+    text-align: center;
+    font-size: 5rem;
+}
+.about-img img{
+        width: 70vw;
+        margin-top: 4rem;
+ }
+    .about-content {
+        text-align: center;
+ }
 }
