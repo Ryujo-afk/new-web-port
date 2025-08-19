@@ -280,9 +280,18 @@ span {
 }
 .about-content h3{
     font-size: 2.6rem;
+    font-weight:400;
+    margin-top: 100px;
+}
+.about-content h3 span{
+    color: var(--primary-color);
+    font-size: 2.6rem;
+    font-weight:400;
+    margin-top: 100px;
 }
 .about-content p {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-weight: 300;
     line-height: 1.8;
     margin: 2rem 0 3rem;
     color: var(--text-color);
@@ -443,10 +452,11 @@ span {
     color: black;;
 }
 .service-info p {
+    margin-top: -10px;
     font-size: 2rem;
     font-weight: 600;
     line-height: 1;
-    max-height: 100px;
+    max-height: 75px;
 }
 
 .works {
@@ -718,4 +728,37 @@ footer .copyright {
     .about-content {
         text-align: center;
  }
+}
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .services-box {
+        height: auto;
+        padding: 2rem;
+        min-height: 250px;
+    }
+    .service-info h2 {
+        font-size: 2.5rem;
+    }
+    .service-info p {
+        font-size: 1.8rem;
+    }
+}
+@media (max-width: 768px) {
+    .works-container {
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        gap: 3rem;
+    }
+    .works-container .work-items {
+        width: 75%;
+        height: 100%;
+    }
+    .works-container .work-items img {
+        height: 100%;
+        object-fit: cover;
+    }
 }

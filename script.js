@@ -1,3 +1,9 @@
+
+
+function goToLogin() {
+    window.location.href = "login.html";
+}
+
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
