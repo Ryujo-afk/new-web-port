@@ -12,6 +12,39 @@ menuIcon.addEventListener('click', () => {
   navbar.classList.toggle('active');     // toggle menu
 });
 
+let darkModeBtn = document.getElementById('dark-mode-btn');
+
+const enableDarkMode = () => {
+  document.body.classList.add("dark-mode");
+  localStorage.setItem("darkMode", "active");
+};
+
+const disableDarkMode = () => {
+  document.body.classList.remove("dark-mode");
+  localStorage.setItem("darkMode", "inactive");
+};
+
+// Check the saved dark mode preference on page load
+if (localStorage.getItem("darkMode") === "active") {
+  enableDarkMode();
+}
+
+// Toggle dark mode on button click
+darkModeBtn.addEventListener('click', () => {
+  if (localStorage.getItem("darkMode") === "active") {
+    disableDarkMode();
+  } else {
+    enableDarkMode();
+  }
+});
+
+function scrollToSlide(index) {
+  const box = document.querySelector('.certificate-box');
+  const width = box.clientWidth;
+  box.scrollTo({ left: width * index, behavior: 'smooth' });
+}
+
+
 // Section scroll active link + sticky header
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');

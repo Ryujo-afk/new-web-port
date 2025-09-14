@@ -16,6 +16,41 @@
     --background-color: #1B2021;
     --text-color: #FDFFFD;
 }
+.dark-mode{
+    --primary-color: #ffe6ff;
+    --secondary-color: #FA17FA;
+    --background-color: #FA17FA;
+    --text-color: #021802;
+}
+
+#dark-mode-btn {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+#dark-mode-btn i {
+    font-size: 24px;
+    transition: opacity 0.3s ease;
+}
+#dark-mode-btn i:last-child {
+    display: none;
+}
+.dark-mode #dark-mode-btn i:first-child {
+    display: none;
+}
+.dark-mode #dark-mode-btn i:last-child {
+    display: block;
+}
 
 html{
     font-size: 60%;
@@ -406,11 +441,14 @@ span {
 }
 
 .services {
-    background-color: var(--background-se);
+    background-color: var(--background-color);
     color: black;
 }
 .services h2{
     margin-bottom: 5rem;
+    color: white;
+}
+.dark-mode .services h2 {
     color: white;
 }
 .services-container {
@@ -428,6 +466,11 @@ span {
     border: 5px solid transparent;
     cursor: pointer;
     transition: 0.4s ease-in-out;
+    color: var(--background-color);
+}
+
+.dark-mode .services-box {
+    background-color: var(--text-color);
     color: var(--background-color);
 }
 .services-box:hover {
@@ -458,6 +501,54 @@ span {
     line-height: 1;
     max-height: 75px;
 }
+
+.certificate {
+    background-color: var(--background-color);
+    padding: 8rem 12% 8rem;   
+    margin-top: 50px;
+}
+.certificate-container {
+    position: relative;
+    max-width: 100rem;
+    margin: auto;
+}
+.certificate-box {
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 0 1rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+.certificate-box img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: fill;
+}
+.slider-nav {
+    display: flex;
+    position: absolute;
+    bottom: -3r em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    column-gap: 1.5rem; /* Increased gap between navigation dots */
+}
+
+.slider-nav a {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: white;
+    opacity: 0.75;
+    transition: opacity 250ms ease ;
+}
+.slider-nav a.active {
+    background: var(--primary-color, #ff009d);
+    opacity: 1;
+}
+
 
 .works {
     background-color: var(--background-color);
