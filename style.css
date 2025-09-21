@@ -495,10 +495,10 @@ span {
     color: black;;
 }
 .service-info p {
-    margin-top: -10px;
+    margin-top: -20px;
     font-size: 2rem;
     font-weight: 600;
-    line-height: 1;
+    line-height: 1.5;
     max-height: 75px;
 }
 
@@ -519,7 +519,7 @@ span {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     box-shadow: 0 0 1rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-    border-radius: 0.5rem;
+    border-radius: 1rem 1rem;
 }
 .certificate-box img {
     flex: 1 0 100%;
@@ -549,6 +549,66 @@ span {
     opacity: 1;
 }
 
+.slider {
+    height: 250px;
+    margin: auto;
+    gap: 10rem;
+    position: relative;
+    width: 80%;
+    display: grid;
+    place-items: center;
+}
+
+.slider .slide-track {
+    display: flex;
+    width: calc(250px * 28); /* Adjust based on number of images */
+    animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 14)); /* Adjust based on number of images */
+    }
+}
+.slide{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+.slide img {
+    width: 80%;
+    height: auto;
+    transition: 1s;
+}
+.slide img:hover {
+    transform: translateZ(20px);
+}
+.slider::before,
+.slider::after {    
+    background: linear-gradient(to right, var(--background-color) 0%, transparent 100%);
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 5%;
+    height: 100%;
+    z-index: 2;
+    }
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
 
 .works {
     background-color: var(--background-color);
@@ -643,7 +703,7 @@ justify-content: space-evenly;
 }
 
 .contact form {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     background: rgba(27,32,33,0.95);
     border-radius: 3rem;
