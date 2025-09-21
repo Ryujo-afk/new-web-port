@@ -74,3 +74,4 @@ window.onscroll = () => {
   menuIcon.classList.remove('fa-times');
   navbar.classList.remove('active');
 };
+
