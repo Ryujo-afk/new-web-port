@@ -13,13 +13,13 @@
 :root{
     --primary-color: #FA17FA;
     --secondary-color: #ff5f9c;
-    --background-color: #ff0000;
-    --text-color: #FDFFFD;
+    --background-color: #1f2324;
+    --text-color: rgb(239, 255, 239);
 }
 .dark-mode{
     --primary-color: #ffe6ff;
     --secondary-color: #FA17FA;
-    --background-color: #de00cc;
+    --background-color: #FA17FA;
     --text-color: #021802;
 }
 
@@ -66,7 +66,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%;po
     padding: 3rem 12% 3rem;
     backdrop-filter: blur(1px);
     display: flex;
