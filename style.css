@@ -13,8 +13,8 @@
 :root{
     --primary-color: #FA17FA;
     --secondary-color: #ff5f9c;
-    --background-color: #1f2324;
-    --text-color: rgb(239, 255, 239);
+    --background-color: #1b1717;
+    --text-color: #FDFFFD;
 }
 .dark-mode{
     --primary-color: #ffe6ff;
