@@ -13,13 +13,13 @@
 :root{
     --primary-color: #FA17FA;
     --secondary-color: #ff5f9c;
-    --background-color: #1B2021;
+    --background-color: #ff0000;
     --text-color: #FDFFFD;
 }
 .dark-mode{
     --primary-color: #ffe6ff;
     --secondary-color: #FA17FA;
-    --background-color: #FA17FA;
+    --background-color: #de00cc;
     --text-color: #021802;
 }
 
