@@ -13,7 +13,7 @@
 :root{
     --primary-color: #FA17FA;
     --secondary-color: #ff5f9c;
-    --background-color: #1b1717;
+    --background-color: #242323;
     --text-color: #FDFFFD;
 }
 .dark-mode{
@@ -66,8 +66,8 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;po
-    padding: 3rem 12% 3rem;
+    width: 100%;
+    padding: 2rem 10% 2rem;
     backdrop-filter: blur(1px);
     display: flex;
     justify-content: space-between;
@@ -77,34 +77,39 @@ header{
 .header .sticky {
     box-shadow: 0.1rem solid rgba(0, 0, 0, 0.2);
 }
+
 .logo{
     font-size: 3rem;
     color: var(--text-color);
     font-weight: 800;
     cursor: pointer;
     text-shadow: 0 0 25px var(--primary-color);
-    margin-left: -600px;
+    margin-top: 1rem;
+    margin-left: -100px;
 }
 .logo:hover{
     transform: scale(1.1);
 }
+
 .logo span{
     text-shadow: 0 0 25px var(--primary-color);
 }
-.logocont img{
-    width: 75px;
-    height: 75px;
-    margin-left: -150px;
-}
 
-.logocont:hover{
-    transform: scale(1.3);
-}
 
+.navbar {
+    display: flex;
+    align-items: right;
+    justify-content: flex-start;
+    gap: 3rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-left: 10rem;
+}
 .navbar a {
     font-size: 1.9rem; 
     color: var(--text-color);
-    margin-left: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     font-weight: 500;
     transition: 0.5s ease;
     border-bottom: 2px solid transparent;
