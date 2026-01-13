@@ -34,7 +34,7 @@
     align-items: center;
     justify-content: center;
     position: fixed;
-    top: 20px;
+    top: 35px;
     right: 20px;
     cursor: pointer;
 }
@@ -52,6 +52,14 @@
     display: block;
 }
 
+@media (max-width: 768px) {
+   #dark-mode-btn {
+    top: 40px;
+    right: 0;
+  }
+}
+
+
 html{
     font-size: 60%;
     overflow-x: hidden;
@@ -67,7 +75,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem 10% 2rem;
+    padding: 2rem 10% 2rem;
     backdrop-filter: blur(1px);
     display: flex;
     justify-content: space-between;
@@ -79,25 +87,16 @@ header{
 }
 
 .logo{
-    font-size: 4rem;
+    font-size: 3rem;
     color: var(--text-color);
-    font-weight: 900;
+    font-weight: 800;
     cursor: pointer;
     text-shadow: 0 0 25px var(--primary-color);
-    margin-left: -100px;
-    top: 2rem;
+    margin-top: 1rem;
+    margin-left: -350px;
 }
 .logo:hover{
     transform: scale(1.1);
-}
-.logo img {
-    position: relative;
-    top: 0;
-    width: 55px;
-    height: 60px;
-    margin-right: 15px;
-    margin-left: -30Popx;
-    vertical-align: middle;
 }
 
 .logo span{
@@ -130,14 +129,16 @@ header{
     color: var(--primary-color);
 }
 
-
 @media (max-width: 768px) {
-  .logo {
-    font-size: 2rem;
-  }
-  .work1-items img {
-    height: 50px;
-  }
+    .logo {
+        position: absolute;
+        left: 1rem;
+        top: 2rem;
+        margin-left: 0;
+        font-size: 2.4rem;
+        justify-items: center;
+        align-items: center;
+    }
 }
 
 #menu-icon {
