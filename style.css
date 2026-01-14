@@ -673,6 +673,7 @@ display: grid;
 justify-content: space-evenly;
 }
 
+
 /* Work Item Card */
 .works-container .work-items {
   position: relative;
@@ -708,8 +709,17 @@ display: grid;
   align-items: center;
   gap: 5rem;
 justify-content: space-evenly;
+
 }
 
+.works1-container1 {
+display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  align-items: left;
+  gap: 3rem;
+justify-content: space-evenly;
+margin-left: -150px;
+}
 /* Work Item Card */
 .works1-container .work1-items {
   position: relative;
